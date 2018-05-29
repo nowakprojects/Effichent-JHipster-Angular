@@ -41,6 +41,12 @@ public class CacheConfiguration {
             cm.createCache(io.github.nowakprojects.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.nowakprojects.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.nowakprojects.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.Fiche.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.FicheSet.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.FicheSet.class.getName() + ".fiches", jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.FicheSet.class.getName() + ".tags", jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.Tag.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.nowakprojects.domain.Tag.class.getName() + ".entries", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
